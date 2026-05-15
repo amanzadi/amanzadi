@@ -1,33 +1,134 @@
 <p align="center">
-  <img src="./header.svg" alt="Amir Hossein Amanzadi" width="900"/>
+  <img src="./header.svg" alt="Amir Hossein Amanzadi — Medical AI Researcher" width="900"/>
 </p>
 
-# About Me
-I am excited about complex interdisciplinary problems in Biomedicine that can be tackled with learning-based systems. I am especially interested in the application of Graph Neural Networks (GNN) in biomedical research.
-
-## 🌐 Socials
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/amanzadi) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/amanzadi) 
-
-
-## 💻 Tech Stack
-![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=flat&logo=r&logoColor=white) ![LINUX](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)  ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=flat&logo=jupyter&logoColor=white)
-
-![LangChain](https://img.shields.io/badge/LangChain-0b5345?logo=langchain&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat&logo=TensorFlow&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=flat&logo=Keras&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&logo=scikit-learn&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=flat&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat&logo=plotly&logoColor=white) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=flat&logo=numpy&logoColor=blue)  ![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=flat&logo=streamlit&logoColor=white) 
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=flat&logo=microsoftazure&logoColor=white) 
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=Cloudflare&logoColor=white) ![Hetzner](https://img.shields.io/badge/Hetzner_Cloud-D50C2D?style=flate&logo=hetzner&logoColor=white) ![Digital Ocean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flate&logo=digitalocean&logoColor=white)
-
-
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white)  ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=flat&logo=nginx&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=flat&logo=redis&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=flat&logo=mysql&logoColor=white) ![Neo4J](https://img.shields.io/badge/Neo4j-008CC1?style=flat&logo=neo4j&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=flat&logo=sqlite&logoColor=white) ![GRAFANA](https://img.shields.io/badge/grafana-F46800.svg?style=flat&logo=grafana&logoColor=white&color=%23F46800) ![PROMETHEUS](https://img.shields.io/badge/prometheus-E6522C.svg?style=flat&logo=prometheus&logoColor=white&color=%23E6522C) ![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=flat&logo=Apache%20Airflow&logoColor=white) ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=flat&logo=apachespark&logoColor=black) ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=flat&logo=apachekafka)  ![AZUREDEVOPS](https://img.shields.io/badge/azuredevops-0078D7.svg?style=flat&logo=azuredevops&logoColor=white&color=%230078D7) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=flat&logo=jira&logoColor=white)  ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white) 
- ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=flat&logo=gitlab&logoColor=white)
- 
- ## 💰 You can help me by Donating
-  [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/amanzadi) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/amanzadi) 
+<p align="center">
+  <a href="https://linkedin.com/in/amanzadi"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"/></a>
+  <a href="https://scholar.google.com"><img src="https://img.shields.io/badge/Scholar-4285F4?style=flat-square&logo=googlescholar&logoColor=white"/></a>
+  <a href="https://twitter.com/amanzadi"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=x&logoColor=white"/></a>
+  <a href="mailto:amirhossein.amanzadi@medisin.uio.no"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white"/></a>
+  <img src="https://img.shields.io/badge/Oslo,_Norway-003087?style=flat-square&logo=googlemaps&logoColor=white"/>
+</p>
 
 ---
-[![](https://visitcount.itsvg.in/api?id=amanzadi&icon=1&color=9)](https://visitcount.itsvg.in)
 
+```bash
+$ man amir
+```
 
+> **Medical AI researcher & builder.** I work at the seam between clinical science, graph learning, and generative AI — translating real biomedical problems into deployable systems. PhD at the University of Oslo (Andreassen Lab, NORMENT), with prior research at Karolinska, Uppsala, and KI, and a track record of shipping AI tools that reach patients and partners.
+
+---
+
+```bash
+$ ls ~/research/
+```
+
+| Domain | Direction |
+|---|---|
+| **Graph Neural Networks** | Drug combinations · PPI · multi-omics integration |
+| **Clinical AI** | Multimodal models for prognosis, imaging, and decision support |
+| **LLMs & VLMs** | Clinical RAG · radiology assistants · agentic biomedical pipelines |
+| **Drug Discovery** | PROTACs, molecular glues, generative chemistry, ADMET |
+| **Translational ML** | Bench → bedside → production deployment |
+
+---
+
+```bash
+$ cat stack.yaml
+```
+
+**ml / graphs**
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![PyG](https://img.shields.io/badge/PyG-3C2179?style=flat-square&logoColor=white)
+![DGL](https://img.shields.io/badge/DGL-0C479D?style=flat-square&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+
+**genai / llms**
+
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic_AI-E92063?style=flat-square&logo=pydantic&logoColor=white)
+
+**cheminformatics**
+
+![RDKit](https://img.shields.io/badge/RDKit-0096FF?style=flat-square&logoColor=white)
+![Schrödinger](https://img.shields.io/badge/Schr%C3%B6dinger-CC0000?style=flat-square&logoColor=white)
+![GROMACS](https://img.shields.io/badge/GROMACS-0070C0?style=flat-square&logoColor=white)
+![AutoDock](https://img.shields.io/badge/AutoDock-2E7D32?style=flat-square&logoColor=white)
+
+**languages**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+![Julia](https://img.shields.io/badge/Julia-9558B2?style=flat-square&logo=julia&logoColor=white)
+![Elixir](https://img.shields.io/badge/Elixir-4B275F?style=flat-square&logo=elixir&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+
+**infra / mlops**
+
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Spark](https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
+![Neo4j](https://img.shields.io/badge/Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
+
+---
+
+```bash
+$ git log --oneline impact/
+```
+
+```
+a7f3d21  DECISION EU       3 cirrhosis treatments advanced to Phase II trials
+b2e8c14  Xanthos           Patented PROTAC hits vs. α-synuclein (Parkinson's)
+c5a1f09  Yara              VLM radiology assistant deployed in production
+d8b4e72  Medhoush          Clinical chat AI, 40k+ active users across platforms
+e1f6a85  Hailo             LLM + robotic wet-lab drug discovery platform
+f3c9b41  Clicktromics      Generative AI for antibody-drug conjugate design
+```
+
+---
+
+```bash
+$ cat publications.bib | head
+```
+
+- **Protein–Protein Interaction Prediction for Targeted Protein Degradation**
+  Orasch, Weber, Müller, *Amanzadi* et al. — *Int. J. Molecular Sciences* (2022)
+- **Predicting Safe Drug Combinations with Graph Neural Networks** *(MSc Thesis)*
+  *Amanzadi* — Uppsala University (2021)
+- **Designing a Multifunctional Peptide for Metal Chelation & Aβ Inhibition**
+  Shamloo, Asadbegi, Khandan, *Amanzadi* — *Polymer Engineering & Science* (2020)
+
+---
+
+```bash
+$ history | grep "academic-path"
+```
+
+```
+2026  PhD Medicine & Health Sciences      University of Oslo
+2025  Full Research Scholarship            Mila — Quebec AI Institute
+2021  MSc Pharmaceutical Science (1st)     Uppsala University
+2018  BSc Pure Chemistry + ME minor        Sharif University of Technology
+```
+
+---
+
+```bash
+$ echo $STATUS
+```
+
+> Open to collaborations in **medical AI**, **graph learning for biomedicine**, and **clinical LLM applications**. Always happy to discuss research, review interesting papers, or sketch ideas at the intersection of medicine and machine learning.
+
+<p align="center">
+  <code>$ exit</code>
+</p>
   
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
