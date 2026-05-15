@@ -14,15 +14,15 @@
 
 ### `$ man amir`
 
-I teach neural networks to do medicine. Sometimes they listen.
+I teach AI Agents to learn and maneuver biology and medicine. Sometimes they listen.
 
-Currently doing a PhD in Oslo, where I turn brain scans into graphs and graphs into hypotheses. Previously: built a radiology assistant that doesn't hallucinate organs, shipped a clinical chatbot to 40k users, and co-authored a few molecules that are now bothering proteins in Phase II trials.
+Currently doing a PhD in Oslo, where I turn Multimodal Clinical Data and Biobanks into predictive models and biological hypotheses. Previously: built an Agentic Medical assistance for Radiology that doesn't hallucinate organs, shipped a clinical chatbot to 40k users, and co-authored a few molecules that are now bothering proteins in Phase II trials.
 
 ### `$ whoami --honest`
 
 ```yaml
 believes_in:    boring infrastructure, sharp questions, reproducible science
-suspicious_of:  benchmarks, hype cycles, anything that won't run on a laptop
+suspicious_of:  benchmarks, hype cycles, anything that won't run on my own laptop
 pronounces:     "PyTorch" with quiet reverence
 debugs_with:    print statements and existential dread
 ```
