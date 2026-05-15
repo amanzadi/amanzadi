@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./header.svg" alt="Amir Hossein Amanzadi" width="900"/>
+</p>
+
 # About Me
 I am excited about complex interdisciplinary problems in Biomedicine that can be tackled with learning-based systems. I am especially interested in the application of Graph Neural Networks (GNN) in biomedical research.
 
