@@ -1,13 +1,14 @@
 <p align="center">
   <img src="./header.svg" alt="Amir Hossein Amanzadi" width="900"/>
 </p>
-
+ <!-- 
 <p align="center">
   <a href="https://linkedin.com/in/amanzadi"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"/></a>
   <a href="https://scholar.google.com"><img src="https://img.shields.io/badge/Scholar-4285F4?style=flat-square&logo=googlescholar&logoColor=white"/></a>
   <a href="https://twitter.com/amanzadi"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=x&logoColor=white"/></a>
   <a href="mailto:amirhossein.amanzadi@medisin.uio.no"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white"/></a>
-</p>
+  --> 
+</p> 
 
 ---
 
