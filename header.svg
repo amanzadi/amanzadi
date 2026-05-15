@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .name {
+        font-family: 'Courier New', monospace;
+        font-size: 28px;
+        font-weight: bold;
+        fill: #e6edf3;
+        letter-spacing: 2px;
+      }
+      .role {
+        font-family: 'Courier New', monospace;
+        font-size: 13px;
+        fill: #58a6ff;
+        letter-spacing: 1px;
+      }
+      .sub {
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        fill: #8b949e;
+      }
+      .cursor {
+        fill: #58a6ff;
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      .node { fill: none; stroke-width: 1.2; }
+      .n1 { stroke: #58a6ff; animation: pulse1 3s ease-in-out infinite; }
+      .n2 { stroke: #3fb950; animation: pulse2 3.5s ease-in-out infinite; }
+      .n3 { stroke: #d2a8ff; animation: pulse3 2.8s ease-in-out infinite; }
+      .n4 { stroke: #58a6ff; animation: pulse1 4s ease-in-out infinite; }
+      .n5 { stroke: #f78166; animation: pulse2 3.2s ease-in-out infinite; }
+      .n6 { stroke: #3fb950; animation: pulse3 3.7s ease-in-out infinite; }
+      .n7 { stroke: #d2a8ff; animation: pulse1 2.5s ease-in-out infinite; }
+      .n8 { stroke: #58a6ff; animation: pulse2 4.2s ease-in-out infinite; }
+
+      .dot { }
+      .d1 { fill: #58a6ff; animation: pulse1 3s ease-in-out infinite; }
+      .d2 { fill: #3fb950; animation: pulse2 3.5s ease-in-out infinite; }
+      .d3 { fill: #d2a8ff; animation: pulse3 2.8s ease-in-out infinite; }
+      .d4 { fill: #58a6ff; animation: pulse1 4s ease-in-out infinite; }
+      .d5 { fill: #f78166; animation: pulse2 3.2s ease-in-out infinite; }
+      .d6 { fill: #3fb950; animation: pulse3 3.7s ease-in-out infinite; }
+      .d7 { fill: #d2a8ff; animation: pulse1 2.5s ease-in-out infinite; }
+      .d8 { fill: #58a6ff; animation: pulse2 4.2s ease-in-out infinite; }
+
+      @keyframes pulse1 {
+        0%, 100% { opacity: 0.15; r: 14; }
+        50% { opacity: 0.55; r: 17; }
+      }
+      @keyframes pulse2 {
+        0%, 100% { opacity: 0.2; r: 12; }
+        50% { opacity: 0.6; r: 15; }
+      }
+      @keyframes pulse3 {
+        0%, 100% { opacity: 0.1; r: 16; }
+        50% { opacity: 0.5; r: 19; }
+      }
+
+      .edge { stroke-width: 0.6; fill: none; }
+      .e1 { stroke: #58a6ff; animation: efade1 3s ease-in-out infinite; }
+      .e2 { stroke: #3fb950; animation: efade2 3.5s ease-in-out infinite; }
+      .e3 { stroke: #d2a8ff; animation: efade1 2.8s ease-in-out infinite; }
+      .e4 { stroke: #58a6ff; animation: efade2 4s ease-in-out infinite; }
+      .e5 { stroke: #f78166; animation: efade1 3.2s ease-in-out infinite; }
+      .e6 { stroke: #3fb950; animation: efade2 3.7s ease-in-out infinite; }
+
+      @keyframes efade1 {
+        0%, 100% { opacity: 0.08; }
+        50% { opacity: 0.35; }
+      }
+      @keyframes efade2 {
+        0%, 100% { opacity: 0.12; }
+        50% { opacity: 0.4; }
+      }
+
+      .tag-gnn { animation: tagfade 4s ease-in-out infinite; }
+      .tag-llm { animation: tagfade 4s ease-in-out infinite 0.8s; }
+      .tag-drug { animation: tagfade 4s ease-in-out infinite 1.6s; }
+      .tag-vlm { animation: tagfade 4s ease-in-out infinite 2.4s; }
+      @keyframes tagfade {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.85; }
+      }
+
+      .title-appear {
+        animation: slidein 1.2s ease-out forwards;
+      }
+      @keyframes slidein {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .role-cycle text {
+        opacity: 0;
+      }
+      .r1 { animation: cycle 9s linear infinite 0s; }
+      .r2 { animation: cycle 9s linear infinite 3s; }
+      .r3 { animation: cycle 9s linear infinite 6s; }
+      @keyframes cycle {
+        0% { opacity: 0; }
+        5% { opacity: 1; }
+        28% { opacity: 1; }
+        33% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <rect width="800" height="200" class="bg" rx="8"/>
+
+  <!-- grid dots background -->
+  <g opacity="0.06">
+    <circle cx="20" cy="20" r="1" fill="#58a6ff"/>
+    <circle cx="60" cy="20" r="1" fill="#58a6ff"/>
+    <circle cx="100" cy="20" r="1" fill="#58a6ff"/>
+    <circle cx="140" cy="20" r="1" fill="#58a6ff"/>
+    <circle cx="660" cy="20" r="1" fill="#58a6ff"/>
+    <circle cx="700" cy="20" r="1" fill="#58a6ff"/>
+    <circle cx="740" cy="20" r="1" fill="#58a6ff"/>
+    <circle cx="780" cy="20" r="1" fill="#58a6ff"/>
+    <circle cx="20" cy="60" r="1" fill="#58a6ff"/>
+    <circle cx="60" cy="60" r="1" fill="#58a6ff"/>
+    <circle cx="660" cy="60" r="1" fill="#58a6ff"/>
+    <circle cx="700" cy="60" r="1" fill="#58a6ff"/>
+    <circle cx="740" cy="60" r="1" fill="#58a6ff"/>
+    <circle cx="780" cy="60" r="1" fill="#58a6ff"/>
+    <circle cx="20" cy="140" r="1" fill="#58a6ff"/>
+    <circle cx="60" cy="140" r="1" fill="#58a6ff"/>
+    <circle cx="660" cy="140" r="1" fill="#58a6ff"/>
+    <circle cx="700" cy="140" r="1" fill="#58a6ff"/>
+    <circle cx="740" cy="140" r="1" fill="#58a6ff"/>
+    <circle cx="780" cy="140" r="1" fill="#58a6ff"/>
+    <circle cx="20" cy="180" r="1" fill="#58a6ff"/>
+    <circle cx="60" cy="180" r="1" fill="#58a6ff"/>
+    <circle cx="100" cy="180" r="1" fill="#58a6ff"/>
+    <circle cx="140" cy="180" r="1" fill="#58a6ff"/>
+    <circle cx="660" cy="180" r="1" fill="#58a6ff"/>
+    <circle cx="700" cy="180" r="1" fill="#58a6ff"/>
+    <circle cx="740" cy="180" r="1" fill="#58a6ff"/>
+    <circle cx="780" cy="180" r="1" fill="#58a6ff"/>
+  </g>
+
+  <!-- LEFT graph network -->
+  <g transform="translate(95,100)">
+    <!-- edges -->
+    <line class="edge e1" x1="0" y1="0" x2="-38" y2="-42"/>
+    <line class="edge e2" x1="0" y1="0" x2="-38" y2="42"/>
+    <line class="edge e3" x1="0" y1="0" x2="38" y2="-28"/>
+    <line class="edge e4" x1="-38" y1="-42" x2="-70" y2="-10"/>
+    <line class="edge e5" x1="-38" y1="42" x2="-70" y2="10"/>
+    <line class="edge e6" x1="-70" y1="-10" x2="-70" y2="10"/>
+    <!-- nodes -->
+    <circle class="node n1" cx="0" cy="0" r="14"/>
+    <circle class="d1" cx="0" cy="0" r="3"/>
+    <circle class="node n2" cx="-38" cy="-42" r="12"/>
+    <circle class="d2" cx="-38" cy="-42" r="2.5"/>
+    <circle class="node n3" cx="-38" cy="42" r="16"/>
+    <circle class="d3" cx="-38" cy="42" r="3"/>
+    <circle class="node n4" cx="38" cy="-28" r="10"/>
+    <circle class="d4" cx="38" cy="-28" r="2"/>
+    <circle class="node n5" cx="-70" cy="-10" r="12"/>
+    <circle class="d5" cx="-70" cy="-10" r="2.5"/>
+    <circle class="node n6" cx="-70" cy="10" r="10"/>
+    <circle class="d6" cx="-70" cy="10" r="2"/>
+  </g>
+
+  <!-- RIGHT graph network -->
+  <g transform="translate(705,100)">
+    <line class="edge e2" x1="0" y1="0" x2="38" y2="-42"/>
+    <line class="edge e3" x1="0" y1="0" x2="38" y2="42"/>
+    <line class="edge e1" x1="0" y1="0" x2="-38" y2="-28"/>
+    <line class="edge e4" x1="38" y1="-42" x2="70" y2="-10"/>
+    <line class="edge e5" x1="38" y1="42" x2="70" y2="10"/>
+    <line class="edge e6" x1="70" y1="-10" x2="70" y2="10"/>
+    <circle class="node n2" cx="0" cy="0" r="14"/>
+    <circle class="d2" cx="0" cy="0" r="3"/>
+    <circle class="node n3" cx="38" cy="-42" r="12"/>
+    <circle class="d3" cx="38" cy="-42" r="2.5"/>
+    <circle class="node n1" cx="38" cy="42" r="16"/>
+    <circle class="d1" cx="38" cy="42" r="3"/>
+    <circle class="node n5" cx="-38" cy="-28" r="10"/>
+    <circle class="d5" cx="-38" cy="-28" r="2"/>
+    <circle class="node n7" cx="70" cy="-10" r="12"/>
+    <circle class="d7" cx="70" cy="-10" r="2.5"/>
+    <circle class="node n8" cx="70" cy="10" r="10"/>
+    <circle class="d8" cx="70" cy="10" r="2"/>
+  </g>
+
+  <!-- CENTER content -->
+  <g class="title-appear">
+    <text x="400" y="72" text-anchor="middle" class="name">Amir Hossein Amanzadi</text>
+
+    <!-- cycling roles -->
+    <g class="role-cycle">
+      <text x="400" y="100" text-anchor="middle" class="role r1">PhD Researcher · Graph ML &amp; Clinical AI · Oslo</text>
+      <text x="400" y="100" text-anchor="middle" class="role r2">GNNs · LLMs · Drug Discovery · Multimodal AI</text>
+      <text x="400" y="100" text-anchor="middle" class="role r3">University of Oslo · Andreassen Lab · 2026–</text>
+    </g>
+
+    <text x="400" y="120" text-anchor="middle" class="sub">amirhossein.amanzadi@medisin.uio.no</text>
+  </g>
+
+  <!-- bottom skill tags -->
+  <g transform="translate(400,152)" text-anchor="middle">
+    <g class="tag-gnn">
+      <rect x="-196" y="-11" width="88" height="20" rx="4" fill="none" stroke="#58a6ff" stroke-width="0.8" opacity="0.5"/>
+      <text x="-152" y="3" font-family="Courier New,monospace" font-size="10" fill="#58a6ff">Graph Neural Nets</text>
+    </g>
+    <g class="tag-llm">
+      <rect x="-98" y="-11" width="56" height="20" rx="4" fill="none" stroke="#d2a8ff" stroke-width="0.8" opacity="0.5"/>
+      <text x="-70" y="3" font-family="Courier New,monospace" font-size="10" fill="#d2a8ff">LLM / RAG</text>
+    </g>
+    <g class="tag-drug">
+      <rect x="-32" y="-11" width="84" height="20" rx="4" fill="none" stroke="#3fb950" stroke-width="0.8" opacity="0.5"/>
+      <text x="10" y="3" font-family="Courier New,monospace" font-size="10" fill="#3fb950">Drug Discovery</text>
+    </g>
+    <g class="tag-vlm">
+      <rect x="62" y="-11" width="130" height="20" rx="4" fill="none" stroke="#f78166" stroke-width="0.8" opacity="0.5"/>
+      <text x="127" y="3" font-family="Courier New,monospace" font-size="10" fill="#f78166">Vision-Language Models</text>
+    </g>
+  </g>
+
+  <!-- bottom line -->
+  <line x1="160" y1="183" x2="640" y2="183" stroke="#21262d" stroke-width="0.5"/>
+  <text x="400" y="195" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#484f58">MSc Uppsala · BSc Sharif · Mila Scholar 2025</text>
+</svg>
