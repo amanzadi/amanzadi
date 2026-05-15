@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="1000" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380">
   <defs>
+    <clipPath id="rightClip">
+      <rect x="640" y="28" width="550" height="352"/>
+    </clipPath>
     <style>
       .bg { fill: #0d1117; }
       .header-bar { fill: #161b22; }
@@ -7,36 +10,22 @@
       .dot-r { fill: #ff5f57; }
       .dot-y { fill: #febc2e; }
       .dot-g { fill: #28c840; }
-      .title {
-        font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
-        font-size: 11px;
-        fill: #8b949e;
+      .title { font-family: 'SF Mono','Monaco','Courier New',monospace; font-size: 11px; fill: #8b949e; }
+      .term { font-family: 'SF Mono','Monaco','Courier New',monospace; font-size: 13px; }
+      .dna-text {
+        font-family: 'SF Mono','Monaco','Courier New',monospace;
+        font-size: 5.0px;
+        fill: #58a6ff;
+        animation: dnaglow 5s ease-in-out infinite;
       }
-      .term {
-        font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
-        font-size: 13px;
-        fill: #c9d1d9;
+      @keyframes dnaglow {
+        0%,100% { opacity: 0.45; }
+        50% { opacity: 0.75; }
       }
-      .ascii {
-        font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
-        font-size: 12px;
-        fill: #3fb950;
-        white-space: pre;
-      }
-      .ascii-dna { animation: glowA 4s ease-in-out infinite; }
-      .ascii-mol { animation: glowB 5s ease-in-out infinite; }
-      .ascii-med { animation: glowC 3.5s ease-in-out infinite; }
-      @keyframes glowA {
-        0%, 100% { opacity: 0.35; }
-        50% { opacity: 0.65; }
-      }
-      @keyframes glowB {
-        0%, 100% { opacity: 0.30; }
-        50% { opacity: 0.55; }
-      }
-      @keyframes glowC {
-        0%, 100% { opacity: 0.40; }
-        50% { opacity: 0.70; }
+      .dna-drift { animation: drift 14s ease-in-out infinite; }
+      @keyframes drift {
+        0%,100% { transform: translate(650px, 28px) scale(0.442); }
+        50% { transform: translate(650px, 20px) scale(0.442); }
       }
       .prompt-user { fill: #3fb950; font-weight: bold; }
       .prompt-sym { fill: #c9d1d9; }
@@ -47,143 +36,209 @@
       .key { fill: #58a6ff; }
       .acc { fill: #d2a8ff; }
       .warn { fill: #f78166; }
-
       .line { opacity: 0; }
-
-      .l1 { animation: appear 0.01s linear 0.3s forwards, typewrite 1.2s steps(30) 0.3s forwards; }
-      .l2 { animation: appear 0.01s linear 1.7s forwards; }
-      .l3 { animation: appear 0.01s linear 2.0s forwards; }
-      .l4 { animation: appear 0.01s linear 2.3s forwards; }
-      .l5 { animation: appear 0.01s linear 2.6s forwards; }
-
-      .l6 { animation: appear 0.01s linear 3.4s forwards, typewrite 1.0s steps(20) 3.4s forwards; }
-      .l7 { animation: appear 0.01s linear 4.6s forwards; }
-      .l8 { animation: appear 0.01s linear 4.9s forwards; }
-      .l9 { animation: appear 0.01s linear 5.2s forwards; }
-      .l10 { animation: appear 0.01s linear 5.5s forwards; }
-
-      .l11 { animation: appear 0.01s linear 6.3s forwards, typewrite 1.3s steps(25) 6.3s forwards; }
-      .l12 { animation: appear 0.01s linear 7.7s forwards; }
-      .l13 { animation: appear 0.01s linear 8.0s forwards; }
-      .l14 { animation: appear 0.01s linear 8.3s forwards; }
-      .l15 { animation: appear 0.01s linear 8.6s forwards; }
-
-      .l20 { animation: appear 0.01s linear 9.4s forwards; }
-      .cursor-final { animation: appear 0.01s linear 9.4s forwards, blink 1s step-end infinite 9.6s; }
-
+      .l1  { animation: appear .01s linear .3s forwards, tw 1.2s steps(30) .3s forwards; }
+      .l2  { animation: appear .01s linear 1.7s forwards; }
+      .l3  { animation: appear .01s linear 2.0s forwards; }
+      .l4  { animation: appear .01s linear 2.3s forwards; }
+      .l5  { animation: appear .01s linear 2.6s forwards; }
+      .l6  { animation: appear .01s linear 3.4s forwards, tw 1.0s steps(20) 3.4s forwards; }
+      .l7  { animation: appear .01s linear 4.6s forwards; }
+      .l8  { animation: appear .01s linear 4.9s forwards; }
+      .l9  { animation: appear .01s linear 5.2s forwards; }
+      .l10 { animation: appear .01s linear 5.5s forwards; }
+      .l11 { animation: appear .01s linear 6.3s forwards, tw 1.3s steps(25) 6.3s forwards; }
+      .l12 { animation: appear .01s linear 7.7s forwards; }
+      .l13 { animation: appear .01s linear 8.0s forwards; }
+      .l14 { animation: appear .01s linear 8.3s forwards; }
+      .l15 { animation: appear .01s linear 8.6s forwards; }
+      .l20 { animation: appear .01s linear 9.4s forwards; }
+      .cursor-final { animation: appear .01s linear 9.4s forwards, blink 1s step-end infinite 9.6s; }
       .loop { animation: loopfade 13s linear infinite; }
-      @keyframes loopfade {
-        0%, 93% { opacity: 1; }
-        97%, 100% { opacity: 0; }
-      }
+      @keyframes loopfade { 0%,93%{opacity:1} 97%,100%{opacity:0} }
       @keyframes appear { to { opacity: 1; } }
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-      @keyframes typewrite {
-        from { clip-path: inset(0 100% 0 0); }
-        to { clip-path: inset(0 0 0 0); }
-      }
-
-      .rotate-dna { animation: rotateDna 8s linear infinite; transform-origin: 760px 170px; }
-      @keyframes rotateDna {
-        0% { transform: scaleX(1); }
-        50% { transform: scaleX(0.4); }
-        100% { transform: scaleX(1); }
-      }
-
-      .pulse-heart { animation: heartPulse 1.2s ease-in-out infinite; transform-origin: 920px 90px; }
-      @keyframes heartPulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.15); }
-      }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+      @keyframes tw { from{clip-path:inset(0 100% 0 0)} to{clip-path:inset(0 0 0 0)} }
     </style>
   </defs>
 
   <g class="loop">
-    <rect width="1000" height="340" class="bg" rx="8"/>
+    <rect width="1200" height="380" class="bg" rx="8"/>
 
-    <g class="ascii ascii-dna rotate-dna">
-      <text x="730" y="50">A══════T</text>
-      <text x="730" y="64"> ╲    ╱</text>
-      <text x="730" y="78">  G══C</text>
-      <text x="730" y="92"> ╱    ╲</text>
-      <text x="730" y="106">T══════A</text>
-      <text x="730" y="120"> ╲    ╱</text>
-      <text x="730" y="134">  C══G</text>
-      <text x="730" y="148"> ╱    ╲</text>
-      <text x="730" y="162">A══════T</text>
-      <text x="730" y="176"> ╲    ╱</text>
-      <text x="730" y="190">  T══A</text>
-      <text x="730" y="204"> ╱    ╲</text>
-      <text x="730" y="218">G══════C</text>
-      <text x="730" y="232"> ╲    ╱</text>
-      <text x="730" y="246">  C══G</text>
-      <text x="730" y="260"> ╱    ╲</text>
-      <text x="730" y="274">A══════T</text>
-      <text x="730" y="288"> ╲    ╱</text>
-      <text x="730" y="302">  G══C</text>
+    <g clip-path="url(#rightClip)">
+      <g class="dna-drift">
+        <text class="dna-text" x="0" y="0" xml:space="preserve">
+<tspan x="0" dy="0">                                                                                                                 _@L                                                                                                                 </tspan>
+<tspan x="0" dy="1.2em">                                                                                                            :{@@@@@@@@@%,.                                                                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                                                                          ,@@@@@@@@@@@@@@@;                                                                                                          </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         L|@@@@@@@@@@@@@@@2_                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                        ,@@@@@@@@@@@@@@@@@@@.                                                                                                        </tspan>
+<tspan x="0" dy="1.2em">                                                                                                        ^@@@@@@@@@@@@@@@@@@@,                                                                                                        </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         @@@@@@@@@@@@@@@@@@@                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                          T@@@@@@@@@@@@@@@4                                                                                                          </tspan>
+<tspan x="0" dy="1.2em">                                                                               _                           "j@@@@@@@@@@@P"                                                                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                                        ._+gg@@g@@g:                         .[@@@@@@@P.                        ._;ggg@ggg-_                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                    .!@@@@@@@@@@@@@@@L                       [@@@@@@@@@!                      ._@@@@@@@@@@@@@@@B                                                                     </tspan>
+<tspan x="0" dy="1.2em">                                                                ,_@@@@@@@@@@@@@@@@@@@@@@                     ]@@@@@@@@@|                     _@@@@@@@@@@@@@@@@@@@@@_.                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                           ___|@@@@@@@@@@@@@@@@@@@@@@@@@_,                   ]@@@@@@@@@                    ,_@@@@@@@@@@@@@@@@@@@@@@@@@k___                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                        :_+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g_                  [@@@@@@@@]'                  _@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@___,                                                       </tspan>
+<tspan x="0" dy="1.2em">                                                   . ggg@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v                 ,@@@@@@@@[q                ."@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ggg                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                ,@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.               'g@@@@@@@@"                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@L                                                </tspan>
+<tspan x="0" dy="1.2em">                                           ._[@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.               |[@@@@@@@@                .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@], .                                          </tspan>
+<tspan x="0" dy="1.2em">                                     _____@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@_               |Q@@@@@@@@!              ,_@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@_~___                                     </tspan>
+<tspan x="0" dy="1.2em">;@[g_____.                     .____J@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g&gt;             |[@@@@@@@g^             '0@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22____                      __yc_z2@:</tspan>
+<tspan x="0" dy="1.2em">  7@@@@@@g@ggWggggggggggggggg@@W@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g_.           |@@@@@@@@@|            _g@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@gggggggggggggggggggg@@@@@@@D7 </tspan>
+<tspan x="0" dy="1.2em">   '$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           '@@@@@@@@[|           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@b{   </tspan>
+<tspan x="0" dy="1.2em">    '`@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g  :g@@@@@@@@:  "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.     </tspan>
+<tspan x="0" dy="1.2em">       :WD=Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g   [@@@@@@@@   a@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q8P        </tspan>
+<tspan x="0" dy="1.2em">           "?*9B$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g   [@@@@@@@B   [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@EBP&lt;E"           </tspan>
+<tspan x="0" dy="1.2em">                   `@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@B   [@@@@@@@$   [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,'                  </tspan>
+<tspan x="0" dy="1.2em">                    &gt;Z@@@@@@@@@@@@@  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   [@@@@@@@]   [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@F.%@@@@@@@@@@@@[P                    </tspan>
+<tspan x="0" dy="1.2em">                      '  &lt;   - '     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@W   $@@@@@@@#   [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      ^ '* -                         </tspan>
+<tspan x="0" dy="1.2em">                                      +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@   Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@M                                      </tspan>
+<tspan x="0" dy="1.2em">                                       %TB@@BW$?E""*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@W   @@@@@@@@@   [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@]"+%4E"B@@9PI                                       </tspan>
+<tspan x="0" dy="1.2em">                                                    8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   g@@@@@@@]   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@N                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                      @@@@@@@@@@@g' +$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g   $@@@@@@@@   [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g~'~f@@@@@@@@@@@'                                                     </tspan>
+<tspan x="0" dy="1.2em">                                                          -          #@@@@@@@@@@@`    ..@@@@@@@@@@@@@@@@@@@   [@@@@@@@@   @@@@@@@@@@@@@@@@@@@W"     @@@@@@@@@@@B'                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                       TPD=B4"           `P@@@@@=gBP@K'       [@@@@@@@]        ff8@4M@@@@@='           +=BP7NP                                                                       </tspan>
+<tspan x="0" dy="1.2em">                                                                                            """               [@@@@@@@g               """                                                                                            </tspan>
+<tspan x="0" dy="1.2em">                                                                                                              4@@@@@@@@                                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                                              [@@@@@@@g                                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                                              g@@@@@@@g                                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                                              [@@@@@@@F                                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                                              [@@@@@@@]                                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                           __. _, __ggggggggg__               @@@@@@@@g                cgggggggggu_.. _,__                                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                                     8@@@@@@@@@@@@@@@@@@@@@@@@@@Z             9@@@@@@@[            .!@@@@@@@@@@@@@@@@@@@@@@@@@@B                                                                     </tspan>
+<tspan x="0" dy="1.2em">                                                              ..@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g,          B@@@@@@@@          ,.@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@_.,                                                             </tspan>
+<tspan x="0" dy="1.2em">                                                           __@@@@@B4@@B8MBBQ=@4BB=B@@@@@@@@@@@@@@@@@_         [@@@@@@@E         \@@@@@@@@@@@@@@@@@0@B4@B@@4B@8BM@4B@@@@@L_.                                                          </tspan>
+<tspan x="0" dy="1.2em">                                                          _@@@@@&lt;"                 &gt;&gt;?$@@@@@@@@@@@@@@R        [@@@@@@@@        [@@@@@@@@@@@@@@P??+'                ""@@@@@/,                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                         [@@@@@@                      '^':@@@@@@[.:I          [@@@@@@@@          9".]@@@@@@P!                        @@@@@@$                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                         [@@@@@@                                              [@@@@@@@[                                              @@@@@@#                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                          .@@@@@                                              [@@@@@@@]                                             ,@@@@@Y                                                          </tspan>
+<tspan x="0" dy="1.2em">                                                            0@@@@g_                                           [@@@@@@@]                                           _9@@@@Mf                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                             \9@@@@l_.                                        '@@@@@@@"                                        ._j@@@@B"                                                             </tspan>
+<tspan x="0" dy="1.2em">                                                               "@@@@@@ggg_ _                                   @@@@@@@                                    __gggg@@@@@'                                                               </tspan>
+<tspan x="0" dy="1.2em">                                                                 &lt; j@@@@@@@@@yL                               .f@@@@@@                               ,'T@@@@@@@@@@P                                                                  </tspan>
+<tspan x="0" dy="1.2em">                                                                    .$@@@@@@@@@@@@@@r-__..                                               .  ..;.j@@@@@@@@@@@@@@N                                                                     </tspan>
+<tspan x="0" dy="1.2em">                                                                         P0g@@@@@@@@@@@@@@@@@@@g_~_A__~__"___&lt;________            .fJ~f@@@@@@@@@@@@@@@@@@QQ4                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                           -"$E@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=gcz___.         ""E$@@@@@@@@@BE?P-                                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                                                "' .J@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ggWga___      '-,@tZ".                                                                                 </tspan>
+<tspan x="0" dy="1.2em">                                                                                        ` ''@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g,.                                                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                                                                        ~&lt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@L..                                                                                       </tspan>
+<tspan x="0" dy="1.2em">                                                                                      __~_______                          "DMPB@@@@@@@@@@@@@@\__                                                                                     </tspan>
+<tspan x="0" dy="1.2em">                                                                                    _@@@@@@@@@@@f~'             _____          '?*M@@@@@@@@@@@@@a                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                   @@@@@@@@@@;-`              .g@@@@@ :            `!?[@@@@@@@@@@@.                                                                                  </tspan>
+<tspan x="0" dy="1.2em">                                                                                 q@@@@@@@@@#                    @@@@@@'                 @@@@@@@@@@@g                                                                                 </tspan>
+<tspan x="0" dy="1.2em">                                                                                ,9@@@@@@@@@'                   U@@@@@W                  `.@@@@@@@@@@;                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                _@@@@@@@@[_                    '@@@@@0                    @@@@@@@@@@@                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                [@@@@@@@@P'                    P@@@@@|                    |@@@@@@@@WW                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                 g@@@@@@@m.                    B@@@@@[                    .4@@@@@@@@'                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                 q@@@@@@@@g                     @@@@@F                    !@@@@@@@@@                                                                                 </tspan>
+<tspan x="0" dy="1.2em">                                                                                  _@@@@@@@@L                   [@@@@@;                   ,@@@@@@@@                                                                                   </tspan>
+<tspan x="0" dy="1.2em">                                                                                   '^@@@@@@@@_                 '@@@@@|                 _@@@@@@@@@                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                     ?4@@@@@@@@_,              L@@@@@'              ._@C@@@@@@@?                                                                                     </tspan>
+<tspan x="0" dy="1.2em">                                                                                       'B@@@@@@@@gg_           |@@@@@;           .;gg@@@@@@@@'^                                                                                      </tspan>
+<tspan x="0" dy="1.2em">                                                                                           Z@@@@@@@@@@L ,        ' 2@|        ]@@@@@@@@@@[                                                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                                                             %@@@@@@@@@@@@g              -[@@@@@@@@@@@@N                                                                                             </tspan>
+<tspan x="0" dy="1.2em">                                                                                                 P44@@@@@@@@@@K3___         4D@@@QB8x                                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                                    *7E$@@@@@@@@@@@$___,       ""                                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                                        `?.?@@@@@@@@@@@@@ggg                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                P@@@@@@@@@@@@@_                                                                                                      </tspan>
+<tspan x="0" dy="1.2em">                                                                                                   .@@@~. ..       ':@@@@@@@@@@@@.                                                                                                   </tspan>
+<tspan x="0" dy="1.2em">                                                                                                 _[@@@@@@@@    __        0D@@@@@@@B_                                                                                                 </tspan>
+<tspan x="0" dy="1.2em">                                                                                               ..@@@@@@P$"     7@@___      -W?@@@@@@(                                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                              _@g@@@@E"         @@@@@g         [@@@@gg                                                                                               </tspan>
+<tspan x="0" dy="1.2em">                                                                                             ,_@@@@@@"         ,@@@@@           \@@@@@)                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                             $@@@@@@'          |@@@@@.           @@@@@@B                                                                                             </tspan>
+<tspan x="0" dy="1.2em">                                                                                             @@@@@@@           o@@@@@|           `M@@@@B                                                                                             </tspan>
+<tspan x="0" dy="1.2em">                                                                                             $@@@@@@           |@@@@@,           , @@@@W,                                                                                            </tspan>
+<tspan x="0" dy="1.2em">                                                                                             &amp;@@@@@@           |@@@@@,           {g@@@@g                                                                                             </tspan>
+<tspan x="0" dy="1.2em">                                                                                               @@@@@.          '@@@@@;           @@@@@M                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                               @@@@@4.          @@@@@.         ./@@@@@'                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                                4@@@@E_         @@@@@'        _[@@@@*                                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                                 "[@@@@s_       @@@@@^      __@@@@P"                                                                                                 </tspan>
+<tspan x="0" dy="1.2em">                                                                                                  '"@@@@@Wg     ..@@@     yg@@@@@C                                                                                                   </tspan>
+<tspan x="0" dy="1.2em">                                                                                                    ^]@@@@@@F.      `!   @@@@@@[!                                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                                       ]@@@@@@l_        .@@@@s                                                                                                       </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         =MB4@@@@a__      Tf                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                            -F@@@@@tj__                                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                77@@@@gggg                                                                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         @@_       ]@@@@@@@@                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                       {@@@@A         -@@@@@@},                                                                                                      </tspan>
+<tspan x="0" dy="1.2em">                                                                                                      @@@@@4'   ___      @@@@@@                                                                                                      </tspan>
+<tspan x="0" dy="1.2em">                                                                                                    _W@@@@g     @@@g_     9@@@@L_                                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                                   ]@@@@@       @@@@@      '@@@@@                                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                                   "@@@@M       @@@@@        *@@@S,                                                                                                  </tspan>
+<tspan x="0" dy="1.2em">                                                                                                  . @@@h.       @@@@@        W@@@@"                                                                                                  </tspan>
+<tspan x="0" dy="1.2em">                                                                                                   "@@@[        @@@@@        ]@@@"                                                                                                   </tspan>
+<tspan x="0" dy="1.2em">                                                                                                    @@@@@       @@@@@       _g@@@                                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                                     "@@@gg     ".@@@     _g@@@"`                                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                                       ]@@@@,      {@    @@@@[                                                                                                       </tspan>
+<tspan x="0" dy="1.2em">                                                                                                        `@@@@@.         {@@@"                                                                                                        </tspan>
+<tspan x="0" dy="1.2em">                                                                                                           B4@@@y_      .4'                                                                                                          </tspan>
+<tspan x="0" dy="1.2em">                                                                                                             T$@@[)__                                                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                                               .@@@@@g-                                                                                                              </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                  `]@@@@l                                                                                                            </tspan>
+<tspan x="0" dy="1.2em">                                                                                                          .,_       .@@@B_.                                                                                                          </tspan>
+<tspan x="0" dy="1.2em">                                                                                                           @H   _    . @@@,                                                                                                          </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         ]2@D   @@_    ]B@Cy                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         @@@W   [@@;    R@@@                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         @@@W   |@@[:    @@@:                                                                                                        </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         @@@l   ;@@@|   .@@@                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         @@@^   ;@@@    "@@@                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                         fT@"   ;!@F.   J@hH                                                                                                         </tspan>
+<tspan x="0" dy="1.2em">                                                                                                          '@W    ^@g|   W@-                                                                                                          </tspan>
+<tspan x="0" dy="1.2em">                                                                                                           @@L   .@g    @@                                                                                                           </tspan>
+<tspan x="0" dy="1.2em">                                                                                                            q@     ,!   f                                                                                                            </tspan>
+<tspan x="0" dy="1.2em">                                                                                                             4(_   |'                                                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                                              &lt;[.   '                                                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                g                                                                                                                    </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                  .                                                                                                                  </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                                                                                                                                     </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                                                                                                                                     </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                ._.                                                                                                                  </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                :q@r:                                                                                                                </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                 0@N                                                                                                                 </tspan>
+<tspan x="0" dy="1.2em">                                                                                                                 .@.                                                                                                                 </tspan>
+        </text>
+      </g>
     </g>
 
-    <g class="ascii ascii-med">
-      <text x="870" y="55">   ▄▀▀▄ ▄▀▀▄</text>
-      <text x="870" y="69">  █ ♥♥ █ ♥♥ █</text>
-      <text x="870" y="83">  █  ♥♥♥♥  █</text>
-      <text x="870" y="97">   ▀▄    ▄▀</text>
-      <text x="870" y="111">     ▀▄▄▀</text>
-      <text x="870" y="125">      ▀</text>
-      <text x="870" y="155">    ╱╲</text>
-      <text x="870" y="169">   ╱██╲</text>
-      <text x="870" y="183">  ╱████╲</text>
-      <text x="870" y="197"> ════════</text>
-      <text x="870" y="211">  ╲████╱</text>
-      <text x="870" y="225">   ╲██╱</text>
-      <text x="870" y="239">    ╲╱</text>
-      <text x="870" y="265">  __/\__</text>
-      <text x="870" y="279">_/      \_/\_</text>
-      <text x="870" y="293">  ECG  ♥</text>
-    </g>
-
-    <rect width="1000" height="28" class="header-bar" rx="8"/>
-    <rect y="20" width="1000" height="8" class="header-bar"/>
-    <rect width="1000" height="340" class="border" rx="8"/>
+    <rect width="1200" height="28" class="header-bar" rx="8"/>
+    <rect y="20" width="1200" height="8" class="header-bar"/>
+    <rect width="1200" height="380" class="border" rx="8"/>
 
     <circle cx="18" cy="14" r="5.5" class="dot-r"/>
     <circle cx="38" cy="14" r="5.5" class="dot-y"/>
     <circle cx="58" cy="14" r="5.5" class="dot-g"/>
-
-    <text x="500" y="18" text-anchor="middle" class="title">amir@uio:~ — zsh — 100×24</text>
+    <text x="600" y="18" text-anchor="middle" class="title">amir@uio:~ — zsh — 120×28</text>
 
     <g class="term">
-      <text x="20" y="58" class="line l1">
+      <text x="20" y="68" class="line l1">
         <tspan class="prompt-user">amir@uio</tspan><tspan class="prompt-sym">:</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-sym">$ </tspan><tspan class="cmd">whoami --verbose</tspan>
       </text>
+      <text x="20" y="88"  class="line l2"><tspan class="hi">▸</tspan> <tspan class="out">name:</tspan>  <tspan class="cmd">Amir Hossein Amanzadi</tspan></text>
+      <text x="20" y="104" class="line l3"><tspan class="hi">▸</tspan> <tspan class="out">role:</tspan>  <tspan class="acc">Medical AI Researcher · Clinical ML Engineer</tspan></text>
+      <text x="20" y="120" class="line l4"><tspan class="hi">▸</tspan> <tspan class="out">affil:</tspan> <tspan class="key">University of Oslo</tspan> <tspan class="out">/ Andreassen Lab · PhD candidate</tspan></text>
+      <text x="20" y="136" class="line l5"><tspan class="hi">▸</tspan> <tspan class="out">focus:</tspan> <tspan class="cmd">bridging clinical science × graph ML × generative AI</tspan></text>
 
-      <text x="20" y="78" class="line l2"><tspan class="hi">▸</tspan> <tspan class="out">name:</tspan> <tspan class="cmd">Amir Hossein Amanzadi</tspan></text>
-      <text x="20" y="94" class="line l3"><tspan class="hi">▸</tspan> <tspan class="out">role:</tspan> <tspan class="acc">Medical AI Researcher · Clinical ML Engineer</tspan></text>
-      <text x="20" y="110" class="line l4"><tspan class="hi">▸</tspan> <tspan class="out">affil:</tspan> <tspan class="key">University of Oslo</tspan> <tspan class="out">/ Andreassen Lab · PhD candidate</tspan></text>
-      <text x="20" y="126" class="line l5"><tspan class="hi">▸</tspan> <tspan class="out">focus:</tspan> <tspan class="cmd">bridging clinical science × graph ML × generative AI</tspan></text>
-
-      <text x="20" y="150" class="line l6">
+      <text x="20" y="170" class="line l6">
         <tspan class="prompt-user">amir@uio</tspan><tspan class="prompt-sym">:</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-sym">$ </tspan><tspan class="cmd">cat expertise.md</tspan>
       </text>
+      <text x="20" y="190" class="line l7"><tspan class="warn">#</tspan> <tspan class="cmd">Graph Neural Networks</tspan>  <tspan class="out">— drug combos, PPI, multi-omics</tspan></text>
+      <text x="20" y="206" class="line l8"><tspan class="warn">#</tspan> <tspan class="cmd">LLMs &amp; VLMs</tspan>           <tspan class="out">— clinical RAG, radiology assistants, agents</tspan></text>
+      <text x="20" y="222" class="line l9"><tspan class="warn">#</tspan> <tspan class="cmd">Cheminformatics</tspan>        <tspan class="out">— PROTAC design, ADMET, generative chem</tspan></text>
+      <text x="20" y="238" class="line l10"><tspan class="warn">#</tspan> <tspan class="cmd">Translational AI</tspan>       <tspan class="out">— bench → bedside → production</tspan></text>
 
-      <text x="20" y="170" class="line l7"><tspan class="warn">#</tspan> <tspan class="cmd">Graph Neural Networks</tspan> <tspan class="out">— drug combos, PPI, multi-omics</tspan></text>
-      <text x="20" y="186" class="line l8"><tspan class="warn">#</tspan> <tspan class="cmd">LLMs &amp; VLMs</tspan> <tspan class="out">— clinical RAG, radiology assistants, agents</tspan></text>
-      <text x="20" y="202" class="line l9"><tspan class="warn">#</tspan> <tspan class="cmd">Cheminformatics</tspan> <tspan class="out">— PROTAC design, ADMET, generative chem</tspan></text>
-      <text x="20" y="218" class="line l10"><tspan class="warn">#</tspan> <tspan class="cmd">Translational AI</tspan> <tspan class="out">— bench → bedside → production</tspan></text>
-
-      <text x="20" y="242" class="line l11">
+      <text x="20" y="272" class="line l11">
         <tspan class="prompt-user">amir@uio</tspan><tspan class="prompt-sym">:</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-sym">$ </tspan><tspan class="cmd">git log --oneline impact/</tspan>
       </text>
+      <text x="20" y="292" class="line l12"><tspan class="key">a7f3d21</tspan> <tspan class="cmd">DECISION EU</tspan> <tspan class="out">— 3 cirrhosis treatments → Phase II trials</tspan></text>
+      <text x="20" y="308" class="line l13"><tspan class="key">b2e8c14</tspan> <tspan class="cmd">Xanthos</tspan>     <tspan class="out">— patented PROTAC hits vs. α-synuclein</tspan></text>
+      <text x="20" y="324" class="line l14"><tspan class="key">c5a1f09</tspan> <tspan class="cmd">Yara</tspan>        <tspan class="out">— VLM radiology assistant in production</tspan></text>
+      <text x="20" y="340" class="line l15"><tspan class="key">d8b4e72</tspan> <tspan class="cmd">Medhoush</tspan>    <tspan class="out">— clinical chat AI, 40k+ active users</tspan></text>
 
-      <text x="20" y="262" class="line l12"><tspan class="key">a7f3d21</tspan> <tspan class="cmd">DECISION EU</tspan> <tspan class="out">— 3 cirrhosis treatments → Phase II trials</tspan></text>
-      <text x="20" y="278" class="line l13"><tspan class="key">b2e8c14</tspan> <tspan class="cmd">Xanthos</tspan> <tspan class="out">— patented PROTAC hits vs. α-synuclein</tspan></text>
-      <text x="20" y="294" class="line l14"><tspan class="key">c5a1f09</tspan> <tspan class="cmd">Yara</tspan> <tspan class="out">— VLM radiology assistant in production</tspan></text>
-      <text x="20" y="310" class="line l15"><tspan class="key">d8b4e72</tspan> <tspan class="cmd">Medhoush</tspan> <tspan class="out">— clinical chat AI, 40k+ active users</tspan></text>
-
-      <text x="20" y="332" class="line l20">
+      <text x="20" y="364" class="line l20">
         <tspan class="prompt-user">amir@uio</tspan><tspan class="prompt-sym">:</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-sym">$ </tspan><tspan class="cursor-final" fill="#3fb950">▊</tspan>
       </text>
     </g>
