@@ -194,16 +194,15 @@
 
   <!-- CENTER content -->
   <g class="title-appear">
-    <text x="400" y="72" text-anchor="middle" class="name">Amir Hossein Amanzadi</text>
+    <text x="400" y="72" text-anchor="middle" class="name">Amir H. Amanzadi</text>
 
     <!-- cycling roles -->
     <g class="role-cycle">
-      <text x="400" y="100" text-anchor="middle" class="role r1">PhD Researcher · Graph ML &amp; Clinical AI · Oslo</text>
-      <text x="400" y="100" text-anchor="middle" class="role r2">GNNs · LLMs · Drug Discovery · Multimodal AI</text>
-      <text x="400" y="100" text-anchor="middle" class="role r3">University of Oslo · Andreassen Lab · 2026–</text>
+      <text x="400" y="100" text-anchor="middle" class="role r1">PhD Researcher · Digital Twin  &amp; Clinical AI · Oslo</text>
+      <text x="400" y="100" text-anchor="middle" class="role r2"> Multimodal AI · Drug Discovery · Multi-Omics</text>
+      <text x="400" y="100" text-anchor="middle" class="role r3">University of Oslo · Institute of Clinical Medicine</text>
     </g>
 
-    <text x="400" y="120" text-anchor="middle" class="sub">amirhossein.amanzadi@medisin.uio.no</text>
   </g>
 
   <!-- bottom skill tags -->
